@@ -37,15 +37,27 @@ html {
 }
 
 .ks-header {
+  padding-top: 4rem;
+  position: fixed;
+  max-width: 96rem;
+  left: 50%;
+  top: 0;
+  width: 100%;
   margin-bottom: 4rem;
+  transform: translateX(-50%);
+  background: black;
+  border-radius: 0 0 10rem 10rem;
+  z-index: 2;
 }
 
 .ks-content {
   margin: 0 auto;
   max-width: 96rem;
+  margin-top: 35rem;
 }
 
 .ks-section {
   height: 100vh;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
+  z-index: 1;
 }
