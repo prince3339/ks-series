@@ -18,5 +18,4 @@
     }
   );
   wow.init();
-  console.log(wow);
 })(window);
