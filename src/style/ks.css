@@ -60,6 +60,7 @@ html {
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: top left;
+  background-attachment: fixed;
 }
 
 .ks-header {
