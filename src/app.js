@@ -1,11 +1,5 @@
 (function(window) {
-  console.log("LANDED!!!");
-  document.getElementById("ks-body").addEventListener("mousewheel", (e) => {
-    console.log(e);
-    e.preventDefault();
-    return null;
-  });
-
+  console.log("Project booted!!!");
   //initialize wow
   //It's for detect if element is inside viewport or not
   var wow = new WOW(

@@ -1,4 +1,4 @@
-/* --------utility styles-------- */
+/* --------utility styles start-------- */
 .layout-column {
   display: -webkit-flex;
   display: -ms-flex;
@@ -15,7 +15,31 @@
 .cur-pointer {
   cursor: pointer;
 }
-/* --------App styles-------- */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: rgba(74, 74, 74, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:window-inactive{
+  background: rgba(74, 74, 74, 0);
+}
+.custom-scrollbar--hide::-webkit-scrollbar {
+  width: 0;
+}
+
+/* --------utility styles end-------- */
+
+/* --------App styles start-------- */
 html {
 	position: relative;
 	width: 100%;
@@ -34,6 +58,7 @@ html {
 .ks-body {
   background-image: url("../assets/img/bg.jpg");
   background-repeat: repeat-y;
+  overflow: hidden;
 }
 
 .ks-header {
@@ -61,3 +86,5 @@ html {
   padding: 4rem 0;
   z-index: 1;
 }
+
+/* --------App styles end-------- */
