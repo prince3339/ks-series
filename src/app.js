@@ -18,4 +18,11 @@
     }
   );
   wow.init();
+  const headerHeight = document.getElementById("ks-header").clientHeight
+  const sections = Array.from(document.getElementsByClassName("ks-section"));
+  sections.forEach((section) => {
+    section.style.marginTop = headerHeight + 30 + 'px';
+    console.log(section);
+  });
+  console.log(sections);
 })(window);
