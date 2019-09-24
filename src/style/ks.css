@@ -96,7 +96,6 @@ html {
 .ks-body {
   background-image: url("../assets/img/bg.jpg");
   background-repeat: no-repeat;
-  overflow: hidden;
   background-position: top left;
   background-attachment: fixed;
 }
@@ -104,7 +103,7 @@ html {
 .ks-header {
   padding-top: 4rem;
   position: fixed;
-  max-width: 76.8rem;
+  max-width: 68rem;
   left: 50%;
   top: 0;
   width: 100%;
@@ -113,22 +112,28 @@ html {
   background: black;
   border-radius: 0 0 10rem 10rem;
   z-index: 2;
+  transition: all 0.2s;
+}
+
+.ks-header--notitle {
+  height: 50px !important;
+  overflow: hidden;
+  transition: all 0.2s;
 }
 
 .ks-content {
   margin: 0 auto;
+  padding: 2.4rem;
 }
 
 .ks-section {
   padding: 4rem 0;
   z-index: 1;
-  max-width: 45.8rem;
+  max-width: 40rem;
   margin: 0 auto;
-  height: 100vh;
-}
-
-.ks-section1 {
-  max-width: 96rem;
+  margin-top: 10rem;
+  /* height: 100vh; */
+  display: none;
 }
 
 .ks-actions {
@@ -142,18 +147,18 @@ html {
 }
 
 .ks-section2, .ks-section3 {
-  max-width: 76.8rem;
+  max-width: 65rem;
+  margin-top: 5rem;
 }
 
 .ks-section7 > div:first-child {
-  max-width: 24rem;
+  max-width: 20rem;
   margin: 0 auto;
 }
 .selected-icon {
-  max-width: 40rem;
+  max-width: 30rem;
   margin: 0 auto;
   padding-left: 10rem;
-  margin-top: 22rem;
 }
 .ks-actions {
   margin-top: 3rem;
@@ -170,5 +175,20 @@ html {
 .ks-section3 > div:last-child {
   margin-top: -5rem;
 }
+.ks-section1 {
+  max-width: 80rem;
+  display: block;
+}
+
+/* mobile style start */
+@media only screen and (max-width: 767px) {
+  .ks-header {
+    width: 30rem;
+  }
+  .ks-header--notitle {
+    height: 2rem !important;
+  }
+}
+/* mobile style end */
 
 /* --------App styles end-------- */
