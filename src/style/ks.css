@@ -166,10 +166,10 @@ html {
 .ks-actions div svg {
   width: 50%;
 }
-.ks-actions div:last-child {
+.ks-actions > div:last-child {
   text-align: right;
 }
-.ks-actions div:last-child svg {
+.ks-actions > div:last-child svg {
   width: 40%;
 }
 .ks-section3 > div:last-child {
