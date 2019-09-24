@@ -158,7 +158,6 @@ html {
 .selected-icon {
   max-width: 30rem;
   margin: 0 auto;
-  padding-left: 10rem;
 }
 .ks-actions {
   margin-top: 3rem;
@@ -178,6 +177,10 @@ html {
 .ks-section1 {
   max-width: 80rem;
   display: block;
+}
+
+.ks-section2 .selected-icon {
+  padding-left: 5rem;
 }
 
 /* mobile style start */
