@@ -74,6 +74,13 @@
   width: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
 /* --------utility styles end-------- */
 
 /* --------App styles start-------- */
@@ -108,7 +115,6 @@ html {
   left: 50%;
   top: 0;
   width: 100%;
-  margin-bottom: 4rem;
   transform: translateX(-50%);
   border-radius: 0 0 10rem 10rem;
   z-index: 2;
@@ -127,13 +133,26 @@ html {
 }
 
 .ks-section {
-  padding: 4rem 0;
   z-index: 1;
   max-width: 40rem;
   margin: 0 auto;
   margin-top: 8rem;
-  /* height: 100vh; */
+  height: 100%;
   display: none;
+  text-align: center;
+  /* flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start; */
+}
+
+.ks-section svg {
+  /* -webkit-box-flex: 1;
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px; */
 }
 
 .ks-actions {
@@ -151,13 +170,22 @@ html {
   margin-top: 5rem;
 }
 
+.ks-section2 > svg {
+  margin-left: 4rem;
+}
+
+.ks-section2 > svg, .ks-section3 > svg {
+  height: 100%;
+}
+
+
 .ks-section4 > div:first-child {
   max-width: 35rem;
   margin: 0 auto;
 }
 
 .ks-section7 > div:first-child {
-  max-width: 20rem;
+  max-width: 17rem;
   margin: 0 auto;
 }
 .selected-icon {
@@ -190,14 +218,17 @@ html {
 
 /* mobile style start */
 @media only screen and (max-width: 767px) {
-  .ks-body {
+  /* .ks-body {
     overflow: auto;
-  }
+  } */
   .ks-header {
     width: 30rem;
   }
   .ks-header--notitle {
     height: 2rem !important;
+  }
+  .ks-section {
+    margin-top: 5rem;
   }
 }
 /* mobile style end */
