@@ -1,7 +1,7 @@
 (function(window) {
   console.log("Project booted!!!");
   const headerHeight = document.getElementById("ks-header").clientHeight
-  document.getElementById("ks-content").style.height = `calc(100vh - ${headerHeight}px)`;
+  document.getElementById("ks-content").style.height = "100vh";
   document.getElementById("ks-section1").style.marginTop = headerHeight + 30 + 'px';
   function gotoSection(targetId, currentId, ignoreOffset) {
     const header = document.getElementById('ks-header');

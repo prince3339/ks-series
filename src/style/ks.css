@@ -129,7 +129,8 @@ html {
 
 .ks-content {
   margin: 0 auto;
-  padding: 2.4rem;
+  padding: 0 2.4rem;
+  overflow: hidden;
 }
 
 .ks-section {
@@ -170,8 +171,8 @@ html {
   margin-top: 5rem;
 }
 
-.ks-section2 > svg {
-  margin-left: 4rem;
+.ks-section2 {
+  padding-left: 2rem;
 }
 
 .ks-section2 > svg, .ks-section3 > svg {
