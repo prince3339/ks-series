@@ -119,6 +119,15 @@ html {
   border-radius: 0 0 10rem 10rem;
   z-index: 2;
   transition: all 0.2s;
+
+  color: white;
+  text-align: center;
+  font-family: 'HelveticaNeueLTPro-Hv';
+}
+
+.ks-header h1 {
+  margin: 0;
+  font-size: 4.8rem;
 }
 
 .ks-header--notitle {
@@ -135,12 +144,13 @@ html {
 
 .ks-section {
   z-index: 1;
-  max-width: 40rem;
+  max-width: 70rem;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 10rem;
   height: 100%;
   display: none;
   text-align: center;
+  position: relative;
   /* flex-direction: row;
   justify-content: center;
   align-items: flex-start;
@@ -148,12 +158,22 @@ html {
 }
 
 .ks-section svg {
+  max-width: 100%;;
   /* -webkit-box-flex: 1;
   box-sizing: border-box;
   -webkit-flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0px; */
+}
+
+.ks-section .start-over {
+  margin-top: 0;
+  position: absolute;
+  bottom: 8rem;
+  width: 8rem;
+  left: calc(50%);
+  transform: translateX(-50%);
 }
 
 .ks-actions {
@@ -175,18 +195,22 @@ html {
   padding-left: 2rem;
 }
 
+.ks-section2 .start-over {
+  left: calc(50% - 4.5%);
+}
+
 .ks-section2 > svg, .ks-section3 > svg {
   height: 100%;
 }
 
 
 .ks-section4 > div:first-child {
-  max-width: 35rem;
+  /* max-width: 35rem; */
   margin: 0 auto;
 }
 
 .ks-section7 > div:first-child {
-  max-width: 17rem;
+  /* max-width: 17rem; */
   margin: 0 auto;
 }
 .selected-icon {
@@ -225,11 +249,17 @@ html {
   .ks-header {
     width: 30rem;
   }
+  .ks-header h1 {
+    font-size: 2rem;
+  }
   .ks-header--notitle {
     height: 2rem !important;
   }
   .ks-section {
     margin-top: 5rem;
+  }
+  .ks-section7, .ks-section4 {
+    margin-top: 8rem;
   }
 }
 /* mobile style end */
