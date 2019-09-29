@@ -36,6 +36,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'helveticaneueltpro-md';
+  src: url('../assets/fonts/HelveticaNeueLTPro/HelveticaNeueLTPro-Md.eot') format('embedded-opentype'),
+       url('../assets/fonts/HelveticaNeueLTPro/HelveticaNeueLTPro-Md.ttf') format('truetype'),
+       url('../assets/fonts/HelveticaNeueLTPro/HelveticaNeueLTPro-Md.woff') format('woff'),
+       url('../assets/fonts/HelveticaNeueLTPro/HelveticaNeueLTPro-Md.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .layout-column {
   display: -webkit-flex;
   display: -ms-flex;
@@ -80,7 +90,39 @@
 .text-left {
   text-align: left;
 }
-
+.padding-top-20 {
+  padding-top: 2rem;
+}
+.margin-top-20 {
+  margin-top: 2rem;
+}
+.margin-top-30 {
+  margin-top: 3rem;
+}
+.margin-top-40 {
+  margin-top: 4rem;
+}
+.ks-button {
+  background: transparent;
+  color: white;
+  border: 2px solid #007bc3;
+  border-radius: 3px;
+  padding: 2rem 0.5em;
+  font-size: 2.4rem;
+  transition: all 0.2s;
+  outline: 0;
+  box-shadow: none;
+}
+.ks-button:hover, .ks-button:focus, .ks-button:active {
+  background: #007bc3;
+  transition: all 0.2s;
+}
+.display-block {
+  display: block;
+}
+.full-width {
+  width: 100%;
+}
 /* --------utility styles end-------- */
 
 /* --------App styles start-------- */
@@ -106,6 +148,8 @@ html {
   background-position: top left;
   background-attachment: fixed;
   overflow: hidden;
+  font-family: 'helveticaneueltpro-md';
+  line-height: 1.5;
 }
 
 .ks-header {
@@ -157,6 +201,23 @@ html {
   align-content: flex-start; */
 }
 
+.ks-section--mobile {
+  text-align: center;
+  color: white;
+}
+
+.ks-section--mobile h2{
+  font-size: 2.4rem;
+}
+
+.ks-section--mobile h3{
+  font-size: 2rem;
+}
+
+.ks-section--mobile h3, .ks-section--mobile h2{
+  font-weight: normal;
+}
+
 .ks-section svg {
   max-width: 100%;;
   /* -webkit-box-flex: 1;
@@ -185,30 +246,26 @@ html {
   align-items: center;
   align-content: center;
 }
-
 .ks-section2, .ks-section3 {
   max-width: 63rem;
   margin-top: 5rem;
 }
-
 .ks-section2 {
   padding-left: 2rem;
 }
-
 .ks-section2 .start-over {
   left: calc(50% - 4.5%);
 }
-
-.ks-section2 > svg, .ks-section3 > svg {
+.ks-section2 .ks-section--desktop, .ks-section3 .ks-section--desktop {
   height: 100%;
 }
-
-
+.ks-section--desktop > svg, .ks-section--desktop > svg {
+  height: 100%;
+}
 .ks-section4 > div:first-child {
   /* max-width: 35rem; */
   margin: 0 auto;
 }
-
 .ks-section7 > div:first-child {
   /* max-width: 17rem; */
   margin: 0 auto;
@@ -229,6 +286,27 @@ html {
 .ks-actions > div:last-child svg {
   width: 40%;
 }
+.ks-actions--mobile {
+  margin-top: 3rem;
+}
+.ks-action a{
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 4rem;
+}
+.ks-action svg {
+  width: 8rem;
+  transform: scale(1.5);
+}
+.ks-action svg:last-child {
+  transform: scale(1.2);
+}
 .ks-section3 > div:last-child {
   margin-top: -5rem;
 }
@@ -241,6 +319,13 @@ html {
   padding-left: 5rem;
 }
 
+.section-selector svg {
+  width: 75%;
+}
+.sub-wofer-icon {
+  width: 70%;
+}
+
 /* mobile style start */
 @media only screen and (max-width: 767px) {
   /* .ks-body {
@@ -248,18 +333,47 @@ html {
   } */
   .ks-header {
     width: 30rem;
+    margin: 0 auto;
+    left: initial;
+    transform: none;
+    position: static;
   }
   .ks-header h1 {
     font-size: 2rem;
   }
   .ks-header--notitle {
-    height: 2rem !important;
+    height: auto !important;
+    border-radius: 0;
+  }
+  .ks-body {
+    background-image: none;
+    background-color: black;
+    overflow: auto;
+  }
+  .ks-content {
+    height: auto!important;
+    padding-bottom: 2.4rem;
+    max-width: 45rem;
   }
   .ks-section {
-    margin-top: 5rem;
+    margin-top: 3rem !important;
+  }
+  .ks-section2 {
+    padding-left: 0;
   }
   .ks-section7, .ks-section4 {
     margin-top: 8rem;
+  }
+  .ks-section--desktop {
+    display: none;
+  }
+  .ks-section3 > div:last-child {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ks-section--mobile {
+    display: none;
   }
 }
 /* mobile style end */

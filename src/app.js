@@ -18,9 +18,9 @@
       targetId === 'ks-section6' ||
       targetId === 'ks-section7'
     ) {
-      const footerHeight = document.querySelector('#'+targetId + '> .ks-actions').clientHeight;
+      const footerHeight = document.querySelector('#'+targetId + '> .ks-section--desktop .ks-actions').clientHeight;
       
-      document.querySelector(`#${targetId} svg`).style.height = `calc(100vh - ${footerHeight + headerHeight + 80}px)`;
+      document.querySelector(`#${targetId} .ks-section--desktop svg`).style.height = `calc(100vh - ${footerHeight + headerHeight + 80}px)`;
     }
     if (targetId !== 'ks-section1') {
       document.getElementById('ks-header').classList.add('ks-header--notitle');
