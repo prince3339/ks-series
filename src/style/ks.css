@@ -342,7 +342,7 @@ html {
     font-size: 2rem;
   }
   .ks-header--notitle {
-    height: auto !important;
+    height: 2rem !important;
     border-radius: 0;
   }
   .ks-body {
