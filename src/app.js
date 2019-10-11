@@ -1,14 +1,14 @@
 (function(window) {
   console.log("Project booted!!!");
-  const headerHeight = document.getElementById("ks-header").clientHeight
+  var headerHeight = document.getElementById("ks-header").clientHeight
   function init() {
     document.getElementById("ks-content").style.height = "100vh";
     document.getElementById("ks-section1").style.marginTop = headerHeight + 30 + 'px';
   }
   function gotoSection(targetId, currentId, ignoreOffset) {
-    const header = document.getElementById('ks-header');
-    const targetSection = document.getElementById(targetId);
-    const currentSection = document.getElementById(currentId);
+    var header = document.getElementById('ks-header');
+    var targetSection = document.getElementById(targetId);
+    var currentSection = document.getElementById(currentId);
     // if(targetId === 'ks-section2' || targetId === 'ks-section3') {
     //   document.getElementById(targetId).style.marginTop =  headerHeight + 'px';
     // }
@@ -18,9 +18,9 @@
       targetId === 'ks-section6' ||
       targetId === 'ks-section7'
     ) {
-      const footerHeight = document.querySelector('#'+targetId + '> .ks-section--desktop .ks-actions').clientHeight;
-      
-      document.querySelector(`#${targetId} .ks-section--desktop svg`).style.height = `calc(100vh - ${footerHeight + headerHeight + 80}px)`;
+      var footerHeight = document.querySelector('#'+targetId + '> .ks-section--desktop .ks-actions').clientHeight;
+      var totalHeight = footerHeight + headerHeight + 80;
+      document.querySelector('#' + targetId + ' ' + '.ks-section--desktop svg').style.height = "calc(100vh - " + totalHeight + "px)";
     }
     if (targetId !== 'ks-section1') {
       document.getElementById('ks-header').classList.add('ks-header--notitle');
@@ -37,7 +37,7 @@
   }
   init();
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", function() {
     init();
   });
   window.gotoSection = gotoSection;
